@@ -72,5 +72,5 @@ jobs:
           gcloud auth configure-docker gcr.io
           gcloud info
 
-    - name: Run unit tests in container
-      run: docker run "gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest" -m unittest --verbose --failfast
+      - name: Run unit tests in container
+        run: docker run "gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest" -m unittest --verbose --failfast
